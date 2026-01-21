@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Web con Menú en Pestañas</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
+</head>
+<body>
+
+<div class="container mt-5">
+    <h1 class="mb-4">Mi App Web</h1>
+
+    <!-- Menú en pestañas -->
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab">Inicio</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab">Perfil</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="settings-tab" data-bs-toggle="tab" data-bs-target="#settings" type="button" role="tab">Configuración</button>
+        </li>
+    </ul>
+
+    <!-- Contenido de las pestañas -->
+    <div class="tab-content mt-3" id="myTabContent">
+        <div class="tab-pane fade show active" id="home" role="tabpanel">
+            <h3>Bienvenido al Inicio</h3>
+            <p>Este es el contenido de la pestaña Inicio.</p>
+        </div>
+        <div class="tab-pane fade" id="profile" role="tabpanel">
+            <h3>Perfil de Usuario</h3>
+            <p>Aquí puedes ver y editar tu perfil.</p>
+        </div>
+        <div class="tab-pane fade" id="settings" role="tabpanel">
+            <h3>Configuración</h3>
+            <p>Personaliza tu experiencia en la app.</p>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
