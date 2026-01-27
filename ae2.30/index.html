@@ -9,12 +9,11 @@
     <!-- Tu CSS personalizado -->
     <link rel="stylesheet" href="css/estilos.css">
     <script src="js/bootstrap.bundle.min.js" defer></script>
-    
 </head>
 <body>
     <!-- HEADER -->
     <header class="main-header">
-        <nav class="navbar navbar-expand-lg container">
+        <nav class="navbar navbar-expand-lg container-fluid">
             <a class="navbar-brand d-flex align-items-center" href="index.html">
                 <img src="imagenes/newlogo_2.png" alt="Logo" height="50" class="me-2">
                 <span class="fw-bold text-white">Kiosko Fernando</span>
@@ -27,7 +26,7 @@
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link text-white" href="landing.html">Inicio</a></li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-white" href="#" id="cartaDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Carta</a>
+                        <a class="nav-link dropdown-toggle text-white" href="#" id="cartaDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Menú</a>
                         <ul class="dropdown-menu" aria-labelledby="cartaDropdown">
                             <li><a class="dropdown-item" href="#">Entrantes fríos</a></li>
                             <li><a class="dropdown-item" href="#">Raciones</a></li>
@@ -37,45 +36,61 @@
                     </li>
                     <li class="nav-item"><a class="nav-link text-white" href="vino.html">Carta de vinos</a></li>
                     <li class="nav-item"><a class="nav-link text-white" href="contacto.html">Contacto y pedidos</a></li>
-                     <li class="nav-item ms-lg-3">
-                            <button id="loginBtn" class="btn btn-warning fw-bold">Iniciar sesión</button>
-                        </li>
                 </ul>
             </div>
         </nav>
     </header>
 
-    <!-- MAIN -->
-    <main class="cta-container">
-        <div class="parallax">
-            <h1 class="mb-3">Descubre la Gastronomía Local</h1>
-            <p class="mb-4">Disfruta de nuestros sabores únicos</p>
-            
-            <!-- Botones de idioma -->
-            <div class="language-buttons mb-3">
-                <a href="landing.html" class="btn-lang">
-                    <img src="data:image/png;base64,...castellano..." alt="Castellano"> Castellano
-                </a>
-                <a href="landing.html" class="btn-lang">
-                    <img src="imagenes/bandera_uk.png" alt="English"> English
-                </a>
-            </div>
-
-            <!-- Botón de inicio de sesión con confirm() -->
-            <button id="loginBtn" class="btn btn-warning fw-bold">Iniciar sesión</button>
+   <main class="main-carousel">
+    <div id="kioskoCarousel" class="carousel slide h-100" data-bs-ride="carousel">
+        <!-- Indicadores -->
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#kioskoCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#kioskoCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
         </div>
-    </main>
+
+        <!-- Slides -->
+        <div class="carousel-inner h-100">
+            <div class="carousel-item active h-100">
+                <div class="carousel-img-container">
+                    <img src="imagenes/r9b1-Kiosco-Fernando-facade-2025-08.jpg" alt="Kiosko Fernando - Sitio">
+                </div>
+            </div>
+            <div class="carousel-item h-100">
+                <div class="carousel-img-container">
+                    <img src="imagenes/r9b1-dishes-Kiosco-Fernando-2025-08-2.jpg" alt="Comida típica Kiosko Fernando">
+                </div>
+            </div>
+        </div>
+
+        <!-- Controles -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#kioskoCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#kioskoCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+        </button>
+    </div>
+</main>
+
 
     <!-- FOOTER -->
-    <footer class="main-footer">
-        <div class="footer-left">Kiosko Fernando | El morche</div>
-        <div class="footer-center">© 2025 Todos los derechos reservados</div>
-        <div class="footer-right d-flex">
-            <div class="social"><span class="icon">📘</span> Facebook</div>
-            <div class="social"><span class="icon">🐦</span> Twitter</div>
-            <div class="social"><span class="icon">📸</span> Instagram</div>
-        </div>
-    </footer>
+   <footer class="main-footer">
+    <div class="footer-left">
+        <div>Kiosko Fernando</div>
+        <div>Todos los derechos reservados © 2025</div>
+    </div>
+
+    <ul class="footer-social">
+        <li><a href="#"><span>📘</span></a> Facebook</li>
+        <li><a href="#"><span>🐦</span></a> Twitter</li>
+        <li><a href="#"><span>📸</span></a> Instagram</li>
+    </ul>
+</footer>
+
+
 
     <!-- JS del botón de login -->
     <script src="js/login.js"></script>
